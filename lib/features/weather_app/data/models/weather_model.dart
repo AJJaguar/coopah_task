@@ -6,16 +6,8 @@ class WeatherModel extends WeatherEntity {
     required super.location,
   });
 
-
-
-
-  
-
   factory WeatherModel.fromMap(Map<String, dynamic> map) => WeatherModel(
         location: map['name'],
         temperature: map['main']['temp'],
       );
-
 }
-
-

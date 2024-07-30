@@ -13,7 +13,7 @@ void main() {
   late WeatherRepositoryImpl repository;
   late MockWeatherDataSource mockWeatherDataSource;
 
-  setUpAll(() {
+  setUp(() {
     mockWeatherDataSource = MockWeatherDataSource();
     repository = WeatherRepositoryImpl(mockWeatherDataSource);
   });
