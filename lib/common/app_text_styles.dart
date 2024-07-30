@@ -1,16 +1,57 @@
 import 'package:flutter/material.dart';
 
+
 class AppTextStyle {
-	/*static TextStyle getAppTextStyle(
-		{double size = 14,
-		FontWeight weight = FontWeight.normal,
-		FontStyle style = FontStyle.normal,
-		Color color = Colors.black}) {
-	  return TextStyle(
-		  color: color,
-		  fontSize: size,
-		  fontWeight: weight,
-		  fontStyle: style,
-		  fontFamily: "Jost"
-	}*/
+
+  /// 20 - extraBold
+  static TextStyle headline1({
+    Color? color,
+    FontWeight fontWeight = FontWeight.w400
+  }) {
+    return _baseTextStyle(
+      color: color,
+      fontSize: 20,
+      fontWeight: fontWeight,
+    );
+  }
+
+  /// 16 - SemiBold
+  static TextStyle headline2({
+    Color? color,
+    FontWeight fontWeight = FontWeight.w400
+  }) {
+    return _baseTextStyle(
+      color: color,
+      fontSize: 16,
+      fontWeight: fontWeight,
+    );
+  }
+
+
+  /// 16 - medium
+  static TextStyle headline3({
+    Color? color,
+    FontWeight fontWeight = FontWeight.w500
+  }) {
+    return _baseTextStyle(
+      color: color,
+      fontSize: 15,
+      fontWeight: fontWeight,
+    );
+  }
+
+
+  static TextStyle _baseTextStyle({
+    Color? color =  Colors.black,
+    double? fontSize,
+    FontWeight? fontWeight,
+  }) {
+    return TextStyle(
+      color: color,
+      fontSize: fontSize,
+      fontWeight: fontWeight,
+      fontFamily: 'CircularStd',
+    );
+  }
 }
+
