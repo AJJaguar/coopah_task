@@ -40,9 +40,9 @@ class _WeatherPage extends State<WeatherApp> {
               BlocConsumer<WeatherBloc, WeatherState>(
                 listener: (context, state) {
                   if (state is WeatherEventFailed) {
-                    ScaffoldMessenger.of(context).showSnackBar( SnackBar(
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                       content: Text(state.failure.message),
-                      duration: const Duration(milliseconds: 300),
+                      duration: const Duration(seconds: 1),
                     ));
                   }
                 },
