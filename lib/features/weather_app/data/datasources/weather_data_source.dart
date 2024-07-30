@@ -20,7 +20,7 @@ class WeatherDataSourceImpl implements WeatherDataSource {
     String apiKey = 'd39d56c77e53ff78e679b0861e2b1daa';
 
     Response response = await dio.get(
-      'https://api.openweathermap.org/data/2.5/weather?lat=${param.lat}&lon=${param.long}&appid=${apiKey}&units=metric',
+      'https://api.openweathermap.org/data/2.5/weather?lat=${param.lat}&lon=${param.long}&appid=$apiKey&units=metric',
     );
 
     final json = response.data;
